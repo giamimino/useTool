@@ -1,0 +1,52 @@
+.cardWrapper {
+  width: 700px;
+  height: 325px;
+  background-image: var(--image-url);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right 0 top 0;
+  padding: 25px 30px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 35px;
+  user-select: none;
+  opacity: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  > div {
+    margin-top: auto;
+
+    h1 {
+      color: #fff;
+      font-size: 25px;
+      font-weight: 500;
+      letter-spacing: -1.25px;
+      line-height: 33.8px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: 500;
+      width: 460px;
+    }
+  }
+}
+
+.show {
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: scale(0.9) translate(0, -100px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1) translate(0, 0);
+  }
+}

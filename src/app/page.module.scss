@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic');
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.heroWelcome {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 159px;
+  width: 100%;
+  align-items: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    border: 1px dashed rgba(255, 255, 255, 0.15);
+    top: -100%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100vh;
+    border: 1px dashed rgba(255, 255, 255, 0.15);
+    top: 25%;
+    transform: translate(-75.6%);
+  }
+
+  h1 {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    padding: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 55px;
+    font-weight: 500;
+    line-height: 70px;
+    letter-spacing: -2.75%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    .corner {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      width: 6px;
+      height: 6px;
+    }
+
+    .corner:nth-child(3) {
+      top: -6px;
+      left: -6px;
+    }
+
+    .corner:nth-child(4) {
+      top: -6px;
+      right: -6px;
+    }
+
+    .corner:nth-child(5) {
+      bottom: -6px;
+      left: -6px;
+    }
+
+    .corner:nth-child(6) {
+      bottom: -6px;
+      right: -6px;
+    }
+  }
+  p {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  >div {
+    position: relative;
+    padding: 6px;
+    display: flex;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 21px;
+    padding-left: 21px;
+    overflow: hidden;
+    span {
+      color: #fff;
+    }
+    input {
+      color: #fff;
+    }
+    input:focus {
+      outline: none;
+    }
+    button {
+      color: rgb(29,29,29);
+      background-color: #fff;
+      padding: 11px 17px;
+      border-radius: 15px;
+      cursor: pointer;
+      &:hover {
+      background-color: rgba(255, 255, 255, 0.85);
+      }
+    }
+
+    &::before {
+      content: "";
+      width: 55px;
+      height: 100px;
+      top: 50%;
+      transform: rotate(24deg) translateY(-50%);
+      background-color: #fff;
+      position: absolute;
+      opacity: 0.15;
+      left: -100px;
+      filter: blur(8px);
+      animation: sineSlidetoRight 1.5s ease 1;
+    }
+
+    &:focus-within::before {
+      animation-name: sineSlidetoRightAlt;
+    }
+    
+    &:has(button:hover)::before {
+      animation: sineSlidetoRight 1.5s ease 1;
+    }
+  }
+}
+
+.features {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+
+.cardsContainer {
+  margin-top: 72px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  >h1 {
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: -1.75px;
+    font-weight: 44px;
+    font-weight: 500;
+    color: #fff;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@keyframes sineSlidetoRight {
+  0% {
+    transform: translateX(-100px) rotate(24deg) translateY(-50%);
+  }
+  100% {
+    transform: translateX(600px) rotate(24deg) translateY(-50%);
+  }
+}
