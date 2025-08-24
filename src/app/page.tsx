@@ -149,14 +149,14 @@ export default function Home() {
           className="relative 
         max-h-[123px] flex-nowrap 
         p-1.5 flex font-medium items-center 
-        bg-white/5 rounded-3xl pl-6 before:content-[''] before:absolute 
+        bg-white/5 rounded-3xl pl-6 max-[440px]:pl-3 max-[440px]:rounded-xl before:content-[''] before:absolute 
         before:w-[55px] before:h-[100px] before:top-1/2 before:left-[-100px] 
         before:bg-white before:opacity-[0.15] before:blur-[8px] overflow-hidden"
         >
           <div className="flex flex-nowrap">
-            <span className="text-white">https://</span>
+            <span className="text-white text-base max-[440px]:text-sm">https://</span>
             <input
-              className="text-white focus:outline-0 bg-transparent"
+              className="text-white focus:outline-0 bg-transparent max-w-50 text-base max-[440px]:text-sm"
               type="text"
               placeholder="yourwebsite.com"
             />
@@ -164,9 +164,11 @@ export default function Home() {
           <button
             className="text-[#1d1d1d] 
           bg-white px-4 py-2 rounded-2xl cursor-pointer 
-          whitespace-normal hover:bg-white/85 transition"
+           whitespace-nowrap hover:bg-white/85 transition max-[440px]:px-2 max-[440px]:py-1 "
           >
+            <span className="text-base max-[440px]:text-sm">
             Start Collaborating
+            </span>
           </button>
         </div>
       </section>
