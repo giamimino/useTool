@@ -34,9 +34,10 @@ export default function Feature(props: Props) {
   }, [])
 
   return (
-    <div className={`${styls.feature} ${inView ? styls[props.direction] : ''}`} ref={featureCart}>
-      <Icon icon={props.icon} />
-      <p>{props.text}</p>
+    <div className={`flex flex-col justify-center items-center gap-4
+    text-center w-full opacity-0 mb-auto ${inView ? styls[props.direction] : ''}`} ref={featureCart}>
+      <Icon icon={props.icon} className='text-white/25 text-3xl' />
+      <p className='text-center'>{props.text}</p>
     </div>
   )
 }

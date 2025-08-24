@@ -33,14 +33,20 @@ export default function Card(props: Props) {
   }, [])
 
   return (
-    <div ref={cardRef} className={`${styles.cardWrapper} ${inView? styles.show : ''}`}
-      style={{
-        "--image-url": `url(${props.image})`,
-      } as React.CSSProperties}
+    <div ref={cardRef} className={`
+      w-full h-80 bg-no-repeat
+      bg-cover py-6.25 px-7.5
+      bg-white/3 rounded-4xl select-none opacity-0
+      flex flex-col
+      ${inView? styles.show : ''}`}
+      style={{ backgroundImage: `url(${props.image})`,
+        backgroundPosition: 'right 0 top 0'
+      }}
     >
-      <div>
-        <h1>{props.title}</h1>
-        <p>{props.description}</p>
+      <div className='mt-auto'>
+        <h1 className='text-white 
+        text-6.25 font-medium tracking-tighter leading-8'>{props.title}</h1>
+        <p className='text-3.5 font-medium leading-5.25 max-w-115'>{props.description}</p>
       </div>
     </div>
   )

@@ -1,24 +1,3 @@
-.feature {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  text-align: center;
-  width: 100%;
-  opacity: 0;
-  margin-bottom: auto;
-
-  svg {
-    color: rgba(255, 255, 255, 0.25);
-    font-size: 32px;
-  }
-
-  p {
-    text-align: center;
-  }
-}
-
 .slideLeft {
   animation: slideLeft 0.7s ease forwards;
 }

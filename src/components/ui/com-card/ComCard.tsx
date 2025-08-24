@@ -35,19 +35,21 @@ export default function CommentCard(props: Props) {
   })
 
   return (
-    <div className={`${styles.card} ${inView ? styles.inView : ''}`} ref={cardRef} style={{
+    <div className={`flex flex-col bg-white/3 rounded-4xl
+      px-6 py-6.25 max-w-80 gap-3.5 h-fit opacity-0 ${inView ? styles.inView : ''}`} ref={cardRef} style={{
       animationDelay: `${props.delay}ms`,
     }}>
-      <header>
+      <header className='flex gap-1.5 text-center'>
         <Image
           src={props.image}
           alt={'FaqCard-image'}
           width={42}
           height={42}
+          priority
         />
-        <div>
-          <h1>{props.name}</h1>
-          <p>{props.job}</p>
+        <div className='flex flex-col'>
+          <h1 className='text-white'>{props.name}</h1>
+          <p className='text-3.5'>{props.job}</p>
         </div>
       </header>
       <p>
